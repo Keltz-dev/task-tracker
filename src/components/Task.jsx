@@ -1,8 +1,8 @@
-const Task = ({ task, deleteTask }) => {
+const Task = ({ task, deleteTask, toggleReminder }) => {
   const { id, text, day, reminder } = task;
 
   return (
-    <div className="task">
+    <div className="task" onDoubleClick={toggleReminder}>
       <h3 key={id}>
         {text}
         <div

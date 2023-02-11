@@ -33,9 +33,11 @@ function App() {
   return (
     <div className="App container">
       <Header />
-      {tasks ? (
-      <Tasks tasks={tasks} deleteTask={deleteTask}/>
-      )
+      {tasks === {} ? (
+        <Tasks tasks={tasks} deleteTask={deleteTask}/>
+      ) : (
+        <h3>there are no tasks right now, go ahead and add one!</h3>
+      )}
     </div>
   );
 }
